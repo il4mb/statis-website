@@ -19,16 +19,18 @@ body {
 .container {
   position: relative;
   border-radius: 8px;
-  max-width: min(100%, 800px);
+  max-width: min(100%, 1200px);
+  width: 100%;
   margin: 0 auto;
   min-height: 500px;
 }
 
 .box {
   margin: 40px;
-  max-width: min(95%, 400px);
+  margin-right: 15px;
+  max-width: 342.8571428571px;
+  min-height: 160px;
   width: 100%;
-  height: 200px;
   background: #ffcc00;
   animation-delay: 1s;
   animation: whoa 1s forwards;
@@ -36,4 +38,8 @@ body {
 
 .grid {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
 }/*# sourceMappingURL=styling.css.map */
