@@ -1,0 +1,39 @@
+@keyframes whoa {
+  100% {
+    margin-left: unset;
+    box-shadow: 8px 8px #b99700, 16px 16px #735e00;
+  }
+}
+html, body {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: black;
+}
+
+.container {
+  position: relative;
+  border-radius: 8px;
+  max-width: min(100%, 800px);
+  margin: 0 auto;
+  min-height: 500px;
+}
+
+.box {
+  margin: 40px;
+  max-width: min(95%, 400px);
+  width: 100%;
+  height: 200px;
+  background: #ffcc00;
+  animation-delay: 1s;
+  animation: whoa 1s forwards;
+}
+
+.grid {
+  display: flex;
+}/*# sourceMappingURL=styling.css.map */
