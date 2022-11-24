@@ -1,3 +1,70 @@
+@keyframes whoa {
+  0% {
+    box-shadow: 6px 6px #ffe100;
+  }
+  30% {
+    box-shadow: 6px 6px #ffe100, 12px 12px rgba(255, 225, 0, 0.5);
+  }
+  60% {
+    box-shadow: 6px 6px #ffe100, 12px 12px rgba(255, 225, 0, 0.5), 18px 18px rgba(255, 225, 0, 0.25);
+  }
+  75% {
+    left: 0px;
+    transform: scale(1);
+  }
+  80% {
+    left: -5px;
+    transform: scale(1.3);
+  }
+  85% {
+    left: 3px;
+    transform: scale(0.8);
+  }
+  99% {
+    left: -1px;
+    transform: scale(1.1);
+  }
+  100% {
+    margin-left: unset;
+    box-shadow: 6px 6px #ffe100, 12px 12px rgba(255, 225, 0, 0.5), 18px 18px rgba(255, 225, 0, 0.25);
+  }
+}
+@keyframes boom {
+  10% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+html, body {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
-  background: #ff073a;
+  background: #2395ff;
+}
+
+.container {
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  max-width: min(100%, 800px);
+  margin: 0 auto;
+  min-height: 500px;
+  box-shadow: inset 0px 0px 8px 1px black;
+}
+
+.box {
+  margin: 15px;
+  margin-top: 15px;
+  width: 200px;
+  height: 100px;
+  background: yellow;
+  animation-delay: 1s;
+  animation: whoa 1.5s forwards;
 }/*# sourceMappingURL=styling.css.map */
