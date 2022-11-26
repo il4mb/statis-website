@@ -1,2 +1,1 @@
-import { DOM } from "./asset/domcreate.js"
-
+import { DOM } from "newdom";
