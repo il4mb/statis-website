@@ -16,12 +16,12 @@ $box-color: #ffcc00
 
 @keyframes whoa 
     100%
-        margin-left: unset 
-        box-shadow: 8px 8px #b99700, 16px 16px #735e00
+        box-shadow: 8px 8px darken($box-color, 15), 16px 16px darken($box-color, 20)
 
         
 html, body 
     box-sizing: border-box
+    color: white
 
 *, *:before, *:after 
     box-sizing: inherit
@@ -45,8 +45,9 @@ $min-box-height: 200px
     min-height: $min-box-height/1.25
     width: 100%
     background: $box-color
-    animation-delay: 1s 
+    
     animation: whoa 1s forwards 
+    animation-delay: .5s 
 
 .grid 
     display: flex
@@ -55,3 +56,27 @@ $min-box-height: 200px
     justify-content: space-evenly
     flex-direction: row
         
+.typing
+    overflow: hidden
+    border-right: .5px solid white
+    white-space: nowrap
+    margin: 0 auto
+    width: fit-content
+    letter-spacing: .05em
+    animation: typing 8s steps(45, end) forwards, blink .75s step-end infinite
+
+@keyframes typing 
+    0% 
+        max-width: 0
+    50%
+        max-width: 800px
+    90% 
+        border-right: .5px solid white
+    100% 
+        border: none
+
+@keyframes blink 
+    0%, 100%
+        border-color: transparent
+    50%
+        border-color: white
